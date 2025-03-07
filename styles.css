@@ -1,0 +1,157 @@
+:root {
+  --bg-color1: #201F20;
+  --bg-color2: #292929;
+  --bg-color3: #393939;
+
+  --bg-accent-color1: #240046;
+  --bg-accent-color2: #3C096C;
+  --bg-accent-color3: #B9AAEE;
+
+  --fg-color: #E6E6E6;
+  --fg-color-comments: #63B456;
+  /* --fg-color-comments-forest: #6a994e; */
+  --fg-color-keyword: #569CD6;
+  /* --fg-color-keyword-vibrance: #0af; */
+  --fg-color-string: #CE9178;
+  --fg-color-number: #B5CEA8;
+}
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: var(--bg-color1);
+  color: var(--fg-color);
+  font-weight: 300;
+  width: 100%;
+}
+
+#navbar {
+  border-right: 2px solid var(--bg-color2);
+  background-color: var(--bg-color1);
+}
+
+
+#navbar header{
+  min-height: 50px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 600;
+  padding: 20px 10px;
+}
+
+#navbar ul {
+  border-top: 3px solid var(--bg-color2);
+  border-bottom: 3px solid var(--bg-color2);
+  list-style-type: none;
+  padding: 0;
+  overflow: auto;
+  margin: 0;
+}
+
+#navbar ul li {
+  border-bottom: 1px solid var(--bg-color2);
+}
+
+#navbar ul li a{
+  display: block;
+  text-decoration: none;
+  padding: 20px 50px;
+  cursor: pointer;
+  color: white;
+}
+#navbar ul li a:hover {
+  background-color: var(--bg-accent-color2);
+  transition: .2s;
+}
+.main-section {
+  padding: 10px 50px;
+
+}
+.main-section header{
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.main-section p {
+  line-height: 2em;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.code-container {
+  background-color: var(--bg-color2);
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.code-container span{
+  display: block;
+}
+
+.lang-title {
+  font-size: 0.8em;
+  padding: 5px 15px;
+}
+
+.code-container code > span{
+  background-color: var(--bg-color1);
+  padding: 15px;
+  line-height: 2em;
+}
+
+.lang-comments {
+  color: var(--fg-color-comments);
+}
+
+.lang-keyword {
+  color: var(--fg-color-keyword);
+}
+
+.code {
+  background-color: var(--bg-color2);
+  padding: 1px 3px;
+}
+
+em {
+  font-style: normal;
+}
+
+.lang-string {
+  color: var(--fg-color-string);
+}
+
+.lang-number {
+  color: var(--fg-color-number);
+}
+
+@media (min-width: 600px) {
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 250px;
+    width: 32%;
+    height: 100%;
+    z-index: 999;
+  }
+  
+  #navbar ul{
+    height: 85%;
+    overflow: auto;
+  }
+
+  #main-doc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+  }
+
+  .main-section header {
+    text-align: left;
+  }
+
+  #navbar ul li a{
+    padding: 20px;
+    line-height: 2em;
+  }
+}

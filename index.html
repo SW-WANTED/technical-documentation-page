@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta name="author" content="Emanuel dos Santos" />
+    <meta name="description" content="Documentação do C#" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C# Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header>C# Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introdução">Introdução</a></li>
+        <li><a class="nav-link" href="#Olá_Mundo">Olá Mundo</a></li>
+        <li><a class="nav-link" href="#Tipos_de_Dados">Tipos de Dados</a></li>
+        <li><a class="nav-link" href="#Variáveis">Variáveis</a></li>
+        <li>
+          <a class="nav-link" href="#Estruturas_de_Controlo"
+            >Estruturas de Controlo</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Estruturas_de_Repetição"
+            >Estruturas de Repetição</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section id="Introdução" class="main-section">
+        <header>Introdução</header>
+        <article>
+          <p>
+            A linguagem C# é a linguagem mais popular para a plataforma .NET, um
+            ambiente de desenvolvimento gratuito, multiplataforma e de código
+            aberto. Os programas C# podem ser executados em muitos dispositivos
+            diferentes, desde dispositivos de Internet das Coisas (IoT) até a
+            nuvem e todos os outros lugares. Você pode escrever aplicativos para
+            telefones, desktops e laptops e servidores.
+          </p>
+        </article>
+      </section>
+      <section id="Olá_Mundo" class="main-section">
+        <header>Olá Mundo</header>
+        <article>
+          <p>
+            O programa "Hello, World" é usado tradicionalmente para introduzir
+            uma linguagem de programação. Este é para C#:
+          </p>
+          <div class="code-container">
+            <span class="lang-title">C#</span>
+            <code>
+              <span>
+                <span class="lang-comments"
+                  >// Esta linha imprime "Hello, World"</span
+                >
+                <span>Console.WriteLine("Hello, World");</span>
+              </span>
+            </code>
+          </div>
+        </article>
+      </section>
+      <section id="Tipos_de_Dados" class="main-section">
+        <header>Tipos de Dados</header>
+        <article>
+          <p>
+            A linguagem C# vem com um conjunto de tipos de dados básicos. Esses
+            tipos de dados são usados ​​para construir valores que são usados
+            ​​em um aplicativo. Vamos explorar os tipos de dados básicos
+            disponíveis em C#. Para cada exemplo, modificaremos apenas a função
+            principal em nosso arquivo Program.cs.
+          </p>
+
+          <p>Os tipos de dados principais em c# são:</p>
+          <ul>
+            <li>int</li>
+            <li>double</li>
+            <li>float</li>
+            <li>char</li>
+            <li>string</li>
+          </ul>
+          <div class="code-container">
+            <span class="lang-title">C#</span>
+            <code>
+              <span>
+                <span class="lang-comments"> // Apenas declarações:</span>
+                <span><em class="lang-keyword">float</em> temperature;</span>
+                <span><em class="lang-keyword">string</em> name;</span>
+                <span><em class="lang-keyword">MyClass</em> myClass;</span>
+                <br />
+                <span class="lang-comments"
+                  >// Declaração com inicialização (4 exemplos):</span
+                >
+                <span
+                  ><em class="lang-keyword">char</em> firstLetter =
+                  <em class="lang-string">'C'</em>;</span
+                >
+                <span
+                  ><em class="lang-keyword">var</em> limit =
+                  <em class="lang-number">3</em>;</span
+                >
+                <span
+                  ><em class="lang-keyword">int</em>[] source = {
+                  <em class="lang-number">0</em>,
+                  <em class="lang-number">1</em>,
+                  <em class="lang-number">2</em>,
+                  <em class="lang-number">3</em>,
+                  <em class="lang-number">4</em>,
+                  <em class="lang-number">5</em> };</span
+                >
+                <span
+                  ><em class="lang-keyword">var</em> query =
+                  <em class="lang-keyword">from</em> item
+                  <em class="lang-keyword">in</em> source</span
+                >
+                <span><em class="lang-keyword">where</em> item <= limit</span>
+                <span><em class="lang-keyword">select</em> item;</span>
+              </span>
+            </code>
+          </div>
+        </article>
+      </section>
+      <section id="Variáveis" class="main-section">
+        <header>Variáveis</header>
+        <article>
+          <p>
+            As variáveis em c# são fortemente tipadas, o que significa que você
+            terá de definir os tipos de dados na sua declaração
+          </p>
+          <p>Na declaração de variáveis você pode:</p>
+          <ul>
+            <li>Definir o seu tipo de dados</li>
+            <li>Inicializar a variável com um valor</li>
+            <li>
+              Definir um tipo <code class="code lang-keyword">var</code> para o
+              compilar decidir qual tipo de dados escolher com base no valor
+              atribuido.
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <p>Declaração de uma variável:</p>
+          <div class="code-container">
+            <span class="lang-title">C#</span>
+            <code>
+              <span>
+                <span><em class="lang-keyword">bool</em> isAlive;</span>
+              </span>
+            </code>
+          </div>
+
+          <p>Inicializando uma variável:</p>
+          <div class="code-container">
+            <span class="lang-title">C#</span>
+            <code>
+              <span>
+                <span
+                  ><em class="lang-keyword">string</em> nome =
+                  <em class="lang-string">"SW Wanted"</em>;</span
+                >
+              </span>
+            </code>
+          </div>
+
+          <p>
+            Definindo um tipo <code class="code lang-keyword">var</code> para a
+            variável:
+          </p>
+          <div class="code-container">
+            <span class="lang-title">C#</span>
+            <code>
+              <span>
+                <span
+                  ><em class="lang-keyword">var</em> idade =
+                  <em class="lang-number">20</em>;</span
+                >
+              </span>
+            </code>
+          </div>
+        </article>
+      </section>
+      <section id="Estruturas_de_Controlo" class="main-section">
+        <header>Estruturas de Controlo</header>
+        <article>
+          <p>
+            As estruturas de controlo são comandos que nos permitem alterar o
+            fluxo de execução normal do programa para um outro quando uma
+            condição lógica for satisfeita.
+          </p>
+          <p>
+            Por exemplo, tu foste contratado para fazer um aplicativo que
+            permita realizar transferências bancárias. Para isso, tu crias
+            elementos que permitam os usuários inserir os dados necessários á
+            transferência: 'IBAN do Destinatário' e o 'Montante', e de seguida,
+            tu crias um botão que permite realizar a transferência bancárias de
+            acordo com os dados fornecidos. O normal a acontecer é que após o
+            botão ser clicado, a transferência deve ser feita. O problema é que
+            nem sempre terás o saldo suficiente para fazer esta operação. Daí
+            surge a necessidade de alterar este 'Fluxo normal' para um outro,
+            que é exibir uma mensagem de erro quando o saldo não for suficiente.
+          </p>
+          <p>As estruturas de controlo em C# são:</p>
+          <ul>
+            <li>
+              A instrução <code><span class="code">if...else</span></code>
+            </li>
+            <li>
+              A instrução <code><span class="code">switch...case</span></code>
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <div class="code-container">
+            <span class="lang-title">C#</span>
+            <code>
+              <span>
+                <span class="lang-comments"
+                  >// Esta é uma sintaxe simples da instrução if</span
+                >
+                <span
+                  ><em class="lang-keyword">if</em> (condition) {
+                  <em class="lang-comments">/* Seu código vai aqui */</em>
+                  }</span
+                >
+              </span>
+            </code>
+          </div>
+        </article>
+      </section>
+      <section id="Estruturas_de_Repetição" class="main-section">
+        <header>Estruturas de Repetição</header>
+        <article>
+          <p>As estruturas de repetição em C# são:</p>
+          <ul>
+            <li>
+              A instrução <code><span class="code">for</span></code>
+            </li>
+            <li>
+              A instrução <code><span class="code">while</span></code>
+            </li>
+            <li>
+              A instrução <code><span class="code">do...while</span></code>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
